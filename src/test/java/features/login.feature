@@ -1,6 +1,8 @@
 Feature: Login
   As a user I should be able to login to the app
 
+#  Background: Being on the login page
+#  Given I am on the sauce demo login page
 
   Scenario: Login with valid credentials
   As a user I should be able to login using valid username and password
@@ -12,7 +14,6 @@ Feature: Login
     Then I should be logged in
     And I should be able to see products
 
-
   Scenario: Login with invalid username
   As a user I shouldn't be able to login using invalid username
 
@@ -21,7 +22,6 @@ Feature: Login
     And I enter my password "secret_sauce"
     And I click on the login button
     Then I should get an error message "Epic sadface: Username and password do not match any user in this service"
-
 
   Scenario: Login with invalid password
   As a user I shouldn't be able to login using invalid password
@@ -32,7 +32,6 @@ Feature: Login
     And I click on the login button
     Then I should get an error message "Epic sadface: Username and password do not match any user in this service"
 
-  @Smoke
   Scenario Outline: Login with invalid credentials
   As a user I shouldn't be able to login using invalid credentials
 
